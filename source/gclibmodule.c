@@ -72,3 +72,16 @@ PyInit_gclib(void)
 {
     return PyModule_Create(&gclibmodule);
 }
+
+/*
+* typedef long GReturn; //!< Every function returns a value of type GReturn. See gclib_errors.h for possible values.
+* typedef unsigned short GCon; //!< Connection handle. Unique for each connection in process. Assigned a value in GOpen().
+* typedef unsigned long GSize; //!< Size of buffers, etc.
+* typedef short GOption; //!< Option integer for various formatting, etc.
+* typedef char* GCStringOut; //!< C-string output from the library. Implies null-termination.
+* typedef const char* GCStringIn; //!< C-string input to the library.  Implies null-termination.
+* typedef char* GBufOut; //!< Data output from the library. No null-termination implied. Returned values may be null-terminated, see function documentation for details.
+* typedef const char* GBufIn; //!< Data input to the library. No null-termination, function will have a GSize to indicate bytes to write .
+* typedef unsigned char GStatus; //!< Interrupt status byte.
+* typedef void* GMemory; //!< Pointer to untyped memory for use in GUtility().
+*/
